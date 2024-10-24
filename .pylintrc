@@ -1,0 +1,4 @@
+[MASTER]
+ignore=.venv,.poetry
+[DESIGN]
+min-public-methods=0
