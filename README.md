@@ -6,8 +6,8 @@ The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands f
 
 ## Pre-requisites
 
-- Python 3.10
-- Poetry (for managing dependencies)
+- Project was developed using Python 3.10
+- [Poetry](https://python-poetry.org/) is used for managing dependencies.
 - Create a `.env` file with the `OPEN_AI_API_KEY`, in the root directory of the project.
 - refer to `.env.example` for the format of the `.env` file.
 
@@ -28,20 +28,31 @@ The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands f
 You can run the server using either `hypercorn` or `uvicorn`.
 
 ### Using Poetry
-First, install the dependencies using Poetry:
+Make sure you have Poetry installed and added to path.
+Then, install the dependencies using Poetry:
 ```sh
 poetry install
 ```
 ### Using Hypercorn
+Run the server with Hypercorn, with following command
 ```sh
-hypercorn app/main:app --bind :8080
+poetry run hypercorn app/main:app --bind :8080
 ```
 
 ### Using Uvicorn
 ```sh
-uvicorn main:app --host 0.0.0.0 --port 8080
+poetry run uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
+#### Note on Hypercorn
+Sometime with Hypercorn you may face this error:
+```sh
+hypercorn.utils.NoAppError: Cannot load application from 'app/main:app', module not found.
+```
+In this case, please type the following in your terminal and run the Hypercorn command again:
+```sh
+export PYTHONPATH=$PWD
+```
 ## Contributing
 
 Pull requests are welcome.
