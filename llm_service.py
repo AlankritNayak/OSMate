@@ -88,7 +88,7 @@ class LLMService:
 
                 config: RunnableConfig = {"configurable": {"thread_id": session_id}}
                 final_message = "User command processed."
-                for chunk in self.agent_executor.stream(
+                async for chunk in self.agent_executor.astream(
                     input={"messages": [HumanMessage(content=user_input)]},
                     config=config,
                 ):

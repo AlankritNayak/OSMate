@@ -31,7 +31,13 @@ def root():
     :return:
         dict: A dictionary containing the available routes.
     """
-    return {"available_endpoints": ["/agent", "/steps/{session_id}"]}
+    return {
+        "available_endpoints": [
+            "/agent",
+            "/steps/{session_id}",
+            "/docs",
+        ]
+    }
 
 
 @app.post(

@@ -1,0 +1,49 @@
+# OSMate
+
+OSMate is a FastAPI server that serves a simple LLM-based agent. 
+The server provides a REST API that allows the user to send natural language inputs to perform simple command line tasks on the server-side.
+The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands for Operating System, and "Mate" is a colloquial term for a friend or a companion.
+
+## Pre-requisites
+
+- Python 3.10
+- Poetry (for managing dependencies)
+- Create a `.env` file with the `OPEN_AI_API_KEY` (refer to `.env.example` for the format)
+
+## Features
+- Asynchronous FastAPI server that processes JSON-based requests and responses.
+- The server acts a gateway to an agent that can perform command line commands, like: navigating file system, CRUD operations on files and more.
+- Once the task is complete, the steps taken by LLM can also be checked.
+- The server internally uses a ReAct agent from LangGraph to perform the tasks.
+
+## Available Endpoints
+
+- `GET /` - Returns a list of available routes.
+- `POST /agent` - Process a user message using the LLMService.
+- `GET /steps/{session_id}` - Get the steps taken for a given session.
+- `GET /docs` - Access the Swagger API documentation.
+
+## Running the server
+You can run the server using either `hypercorn` or `uvicorn`.
+
+### Using Poetry
+First, install the dependencies using Poetry:
+```sh
+poetry install
+```
+### Using Hypercorn
+```sh
+hypercorn app/main:app --bind :8080
+```
+
+### Using Uvicorn
+```sh
+uvicorn main:app --host 0.0.0.0 --port 8080
+```
+
+## Contributing
+
+Pull requests are welcome.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
