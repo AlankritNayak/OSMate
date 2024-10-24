@@ -36,13 +36,13 @@ poetry install
 ### Using Hypercorn
 Run the server with Hypercorn, with following command
 ```sh
-poetry run hypercorn app/main:app --bind :8080
+poetry run hypercorn app/main:app --bind :8000
 ```
 
 ### Using Uvicorn
 Run the server with Uvicorn, with following command
 ```sh
-poetry run uvicorn main:app --host 0.0.0.0 --port 8080
+poetry run uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 #### Note on Hypercorn
