@@ -6,7 +6,7 @@ The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands f
 
 ## Pre-requisites
 
-- Project was developed using Python 3.10
+- Project is developed using Python 3.10.
 - [Poetry](https://python-poetry.org/) is used for managing dependencies.
 - Create a `.env` file with the `OPEN_AI_API_KEY`, in the root directory of the project.
 - refer to `.env.example` for the format of the `.env` file.
