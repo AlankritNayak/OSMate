@@ -8,7 +8,8 @@ The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands f
 
 - Python 3.10
 - Poetry (for managing dependencies)
-- Create a `.env` file with the `OPEN_AI_API_KEY` (refer to `.env.example` for the format)
+- Create a `.env` file with the `OPEN_AI_API_KEY`, in the root directory of the project.
+- refer to `.env.example` for the format of the `.env` file.
 
 ## Features
 - Asynchronous FastAPI server that processes JSON-based requests and responses.
