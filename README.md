@@ -40,12 +40,13 @@ poetry run hypercorn app/main:app --bind :8080
 ```
 
 ### Using Uvicorn
+Run the server with Uvicorn, with following command
 ```sh
 poetry run uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
 #### Note on Hypercorn
-Sometime with Hypercorn you may face this error:
+Sometimes with Hypercorn you may face this error:
 ```sh
 hypercorn.utils.NoAppError: Cannot load application from 'app/main:app', module not found.
 ```
