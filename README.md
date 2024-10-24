@@ -1,6 +1,6 @@
 # OSMate
 
-OSMate is a FastAPI server that serves a simple LLM-based agent. 
+OSMate is a FastAPI server that serves an LLM-based agent. 
 The server provides a REST API that allows the user to send natural language inputs to perform simple command line tasks on the server-side.
 The name OSMate is a combination of the words "OS" and "Mate". The "OS" stands for Operating System, and "Mate" is a colloquial term for a friend or a companion.
 
